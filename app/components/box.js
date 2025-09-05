@@ -9,7 +9,7 @@ const Box = ({number}) => {
         <div className="title mx-auto w-fit text-2xl">
             Read the Quran
         </div>
-        <div className="text w-[20vw] mx-auto text-center text-gray-400">
+        <div className="text w-fit h-[13vh] mx-auto text-center text-gray-400">
             Explore the holy Quran with Arabic text, translations, and detailed Tafseer commentary
         </div>
         <div className="btn text-center">
@@ -19,7 +19,7 @@ const Box = ({number}) => {
         <div className="title mx-auto w-fit text-2xl">
             Search & Discover
         </div>
-        <div className="text w-[20vw] mx-auto text-center text-gray-400">
+        <div className="text w-fit h-[13vh] mx-auto text-center text-gray-400">
             Find specific verses, topics, or explore Surahs with our powerful search functionality.
         </div>
         <div className="btn text-center">
@@ -29,7 +29,7 @@ const Box = ({number}) => {
         <div className="title mx-auto w-fit text-2xl">
             Go to Dashboard
         </div>
-        <div className="text w-[20vw] mx-auto text-center text-gray-400">
+        <div className="text w-fit h-[13vh] mx-auto text-center text-gray-400">
             Save your favorite verses and build your personal collection of meaningful passages.
         </div>
         <div className="btn text-center">
