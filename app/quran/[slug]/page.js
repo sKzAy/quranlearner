@@ -44,7 +44,7 @@ useEffect(() => {
 }, [])
 
   if (loading) return <>
-   <nav data-aos ="fade-in" className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
+   <nav className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
           <Link className='hover:underline hover:text-black transition-all hover:transition-all duration-500' href={"/"}>Back to home</Link>
@@ -54,13 +54,13 @@ useEffect(() => {
           <Link className='' href={'/dashboard'}>My Favorites</Link>
         </div>
       </nav>ob
-   <div data-aos = "fade-in" className='w-full h-full flex justify-center align-middle'>
+   <div  className='w-full h-full flex justify-center align-middle'>
     <div className='text-green-500 text-7xl'> Loading... </div>
   </div> </>
   
   return (
     <>
-     <nav data-aos ="fade-in" className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
+     <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
           <Link className='hover:underline hover:text-black transition-all hover:transition-all duration-500' href={"/"}>Back to home</Link>
@@ -73,8 +73,8 @@ useEffect(() => {
         <div className='flex justify-between'>
           {/* <div><Image src={""} alt = "none" width={20} height={20}></Image></div> */}
         </div>
-      <div data-aos = "fade-in" className='bigboy shadow-sm rounded-xl w-fit h-fit mx-auto border-gray-100 border-solid '>
-          <div data-aos = "fade-in" className="surah w-[75vw] mx-auto bg-green-100  pt-5 p-10 max-md:w-full">
+      <div  className='bigboy shadow-sm rounded-xl w-fit h-fit mx-auto border-gray-100 border-solid '>
+          <div  className="surah w-[75vw] mx-auto bg-green-100  pt-5 p-10 max-md:w-full">
           <div className="title">
               <div className="arabic flex text-green-800 font-bold justify-end">
               <p className='w-fit text-3xl'>{surah.data?.name}</p>
@@ -84,13 +84,7 @@ useEffect(() => {
               </div>
           </div>
         </div>
-            <div >
-            {/* <div className="verses w-[75vw] mx-auto bg-gray-100 p-10 ">
-             <div className="arabic flex text-green-800 font-bold justify-end mx-">
-              <p className='w-fit text-xl'> بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ </p>
-              </div>
-              <p>In the name of Allah the Most Gracious the Most Merciful</p>
-          </div> */}
+            <div>
            {
           surah?.data?.ayahs?.map((surah,index) =>
           <div key={index} >

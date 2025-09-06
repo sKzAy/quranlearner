@@ -28,7 +28,7 @@ export default function Page(){
     }, [])
 
     if (loading){
-        return  <> <nav data-aos ="fade-in" className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
+        return  <> <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
           <Link className='hover:underline hover:text-black transition-all hover:transition-all duration-500' href={"/"}>Back to home</Link>
@@ -42,7 +42,7 @@ export default function Page(){
     }
   return (
     <>
-       <nav data-aos ="fade-in" className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
+       <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
           <Link className='hover:underline hover:text-black transition-all hover:transition-all duration-500' href={"/"}>Back to home</Link>
@@ -56,7 +56,7 @@ export default function Page(){
       max-md:flex-col">
         {
             surahArray.map((surah) =>
-            <div data-aos ="fade-in" onClick={()=>{
+            <div  onClick={()=>{
                 router.push(`quran/${surah.number}`)
             }} key={surah.number} className="max-md:w-[80vw] surahbox bg-green-800 w-[20vw] p-10 rounded-xl hover:shadow-xl hover:shadow-green-300 cursor-pointer transition-all hover:transition-all duration-300 mx-auto">
             <div className="arabicName text-green-100 flex justify-between gap-5">
