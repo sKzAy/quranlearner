@@ -1,6 +1,6 @@
 import React from 'react'
 
-const page = () => {
+export default function Page(){
   return (
     <>
       search
@@ -8,4 +8,4 @@ const page = () => {
   )
 }
 
-export default page
+

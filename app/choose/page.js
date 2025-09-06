@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useRouter, } from 'next/navigation'
 import Footer from '../components/footer'
 
-const page = () => {
+export default function Page(){
     const [surahArray,setSurahArray] = useState([]);
     let router = useRouter()
     const [loading,setLoading] = useState(true)
@@ -76,4 +76,4 @@ const page = () => {
   )
 }
 
-export default page
+

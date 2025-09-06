@@ -5,7 +5,7 @@ import { useEffect,useState } from 'react'
 import { use } from 'react'
 import Footer from '@/app/components/footer'
 
-const page = ({params}) => {
+const Page = ({params}) => {
 let number = use(params)
 
   // console.log(`sloggy: ${params.slug}`)
@@ -112,4 +112,4 @@ useEffect(() => {
   )
 }
 
-export default page
+export default Page
