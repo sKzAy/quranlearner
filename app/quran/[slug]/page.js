@@ -55,7 +55,7 @@ useEffect(() => {
         </div>
       </nav>ob
    <div data-aos = "fade-in" className='w-full h-full flex justify-center align-middle'>
-    <div className='text-green-500 text-7xl'> Loading.... </div>
+    <div className='text-green-500 text-7xl'> Loading... </div>
   </div> </>
   
   return (
