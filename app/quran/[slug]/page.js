@@ -53,7 +53,7 @@ useEffect(() => {
         <div className='w-fit mx-auto'>
           <Link className='' href={'/dashboard'}>My Favorites</Link>
         </div>
-      </nav>
+      </nav>ob
    <div data-aos = "fade-in" className='w-full h-full flex justify-center align-middle'>
     <div className='text-green-500 text-7xl'> Loading.... </div>
   </div> </>
