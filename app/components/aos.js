@@ -1,19 +1,19 @@
-"use client";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+// "use client";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+// import { useEffect } from "react";
 
-const AOSAnimate = () => {
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      offset: 100,
-      duration: 500,
-      easing: "ease",
-    });
-  }, []);
+// const AOSAnimate = () => {
+//   useEffect(() => {
+//     AOS.init({
+//       once: true,
+//       offset: 100,
+//       duration: 500,
+//       easing: "ease",
+//     });
+//   }, []);
 
-  return null;
-};
+//   return null;
+// };
 
-export default AOSAnimate;
+// export default AOSAnimate;
