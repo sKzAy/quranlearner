@@ -13,7 +13,7 @@ const Box = ({number}) => {
             Explore the holy Quran with Arabic text, translations, and detailed Tafseer commentary
         </div>
         <div className="btn text-center">
-            <Link className='hover:text-black duration-500 tranistion-all hover:transition-all bg-gradient-to-r from-green-400 to-green-600 text-white p-3 rounded-xl' href={"/quran"}>Get Started</Link>
+            <Link className='hover:text-black duration-500 tranistion-all hover:transition-all bg-gradient-to-r from-green-400 to-green-600 text-white p-3 rounded-xl' href={"/choose"}>Get Started</Link>
         </div>
       </div> : number === 2? <div className='flex flex-col bg-white w-fit h-fit p-10 rounded-3xl gap-4 hover:shadow-xl transition-all hover:transition-all duration-500'>
         <div className="title mx-auto w-fit text-2xl">
