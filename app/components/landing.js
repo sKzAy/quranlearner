@@ -33,7 +33,7 @@ const Landing = () => {
         </div>
       </div>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   )
 }

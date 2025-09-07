@@ -43,7 +43,7 @@ export default function Page(){
           <div><UserButton/></div>
         </div>
       </nav>
-      <div data-aos = "fade-in" className='min-w-full min-h-full flex justify-center align-middle'>
+      <div data-aos = "fade-in" className=' min-h-[80vh] flex justify-center items-center text-center'>
       <Trio
   size="150"
   speed="1.5"
@@ -66,12 +66,12 @@ export default function Page(){
         </div>
       </nav>
       <div className="pg bg-gray-100 h-fit flex justify-center align-middle flex-wrap p-5 gap-5 text-center
-      max-md:flex-col">
+      max-md:flex-col ">
         {
             surahArray.map((surah) =>
             <div  onClick={()=>{
                 router.push(`quran/${surah.number}`)
-            }} key={surah.number} className="max-md:w-[80vw] surahbox bg-green-800 w-[20vw] p-10 rounded-xl hover:shadow-xl hover:shadow-green-300 cursor-pointer transition-all hover:transition-all duration-300 mx-auto">
+            }} key={surah.number} className=" max-md:w-[80vw] surahbox bg-green-800 w-[20vw] p-10 rounded-xl hover:shadow-xl hover:shadow-green-300 cursor-pointer transition-all hover:transition-all duration-300 mx-auto">
             <div className="arabicName text-green-100 flex justify-between gap-5">
                 
                 <div className="Arabic font-bold mx-auto"> {surah.number} - {surah.name}  </div>
@@ -84,7 +84,7 @@ export default function Page(){
         
         }
       </div>
-    {loading === false ? <Footer/>:<div></div>}
+    {/* <Footer/> */}
     </div>
   )
 }

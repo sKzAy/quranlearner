@@ -59,13 +59,13 @@ useEffect(() => {
           <div><UserButton/></div>
         </div>
       </nav>
-      <div className='min-w-full min-h-full flex justify-center align-middle'>
-      <Trio
-  size="150"
-  speed="1.5"
-  color='green'
-    />
-</div>
+      <div data-aos = "fade-in" className='min-h-[80vh] flex justify-center items-center text-center'>
+           <Trio
+       size="150"
+       speed="1.5"
+       color='green'
+         />
+     </div>
    </div>
   
   return (
@@ -73,7 +73,7 @@ useEffect(() => {
     <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
-          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/"}><ArrowBack/> Back to home</Link>
+          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/choose"}><ArrowBack/> Back to choose</Link>
         </div>
         <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>Quran Reader</p></div>
         <div className='w-fit mx-auto flex gap-5'>
@@ -95,7 +95,7 @@ useEffect(() => {
               </div>
           </div>
         </div>
-            <div>
+            <div className='mb-10'>
            {
           surah?.data?.ayahs?.map((surah,index) =>
           <div key={index} >
@@ -113,7 +113,7 @@ useEffect(() => {
       
       </div>
       
-      {loading === false ? <Footer/>:<div></div>}
+      {/* {loading === false ? <Footer/>:<div></div>} */}
       
     </div>
   )
