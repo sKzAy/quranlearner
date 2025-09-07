@@ -4,7 +4,8 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter, } from 'next/navigation'
 import Footer from '../components/footer'
-
+import { UserButton } from '@clerk/nextjs'
+import { ArrowBack, Favorite } from '@mui/icons-material'
 export default function Page(){
     const [surahArray,setSurahArray] = useState([]);
     let router = useRouter()
@@ -21,7 +22,6 @@ export default function Page(){
         catch (error){
             console.log(error)
         }
-        
     }
     useEffect(() => {
       fetchSurahs()
@@ -31,11 +31,12 @@ export default function Page(){
         return  <> <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
-          <Link className='hover:underline hover:text-black transition-all hover:transition-all duration-500' href={"/"}>Back to home</Link>
+          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/"}><ArrowBack/> Back to home</Link>
         </div>
         <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>Quran Reader</p></div>
-        <div className='w-fit mx-auto'>
-          <Link className='' href={'/dashboard'}>My Favorites</Link>
+        <div className='w-fit mx-auto flex gap-5'>
+          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={'/dashboard'}>My Favorites <Favorite/> </Link>
+          <div><UserButton/></div>
         </div>
       </nav>
       </>
@@ -45,11 +46,12 @@ export default function Page(){
        <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
-          <Link className='hover:underline hover:text-black transition-all hover:transition-all duration-500' href={"/"}>Back to home</Link>
+          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/"}><ArrowBack/> Back to home</Link>
         </div>
         <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>Quran Reader</p></div>
-        <div className='w-fit mx-auto'>
-          <Link className='' href={'/dashboard'}>My Favorites</Link>
+        <div className='w-fit mx-auto flex gap-5'>
+          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={'/dashboard'}>My Favorites <Favorite/> </Link>
+          <div><UserButton/></div>
         </div>
       </nav>
       <div className="pg bg-gray-100 h-fit flex justify-center align-middle flex-wrap p-5 gap-5 text-center
