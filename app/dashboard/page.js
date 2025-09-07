@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { UserButton, UserProfile } from '@clerk/nextjs'
 import { ArrowBack, ArrowForward, AutoStories, Search } from '@mui/icons-material'
 
-const page = () => {
+const Page = () => {
   let favVerses = []
 
   if (favVerses.length === 0){
@@ -76,4 +76,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
