@@ -6,6 +6,10 @@ import { useRouter, } from 'next/navigation'
 import Footer from '../components/footer'
 import { UserButton } from '@clerk/nextjs'
 import { ArrowBack, Favorite } from '@mui/icons-material'
+import { Trio } from 'ldrs/react'
+import 'ldrs/react/Trio.css'
+
+
 export default function Page(){
     const [surahArray,setSurahArray] = useState([]);
     let router = useRouter()
@@ -39,6 +43,13 @@ export default function Page(){
           <div><UserButton/></div>
         </div>
       </nav>
+      <div className='min-w-full min-h-full flex justify-center align-middle'>
+      <Trio
+  size="150"
+  speed="1.5"
+  color='green'
+    />
+</div>
       </>
     }
   return (

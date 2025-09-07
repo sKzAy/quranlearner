@@ -6,7 +6,8 @@ import { use } from 'react'
 import Footer from '@/app/components/footer'
 import { UserButton } from '@clerk/nextjs'
 import { ArrowBack, Favorite } from '@mui/icons-material'
-
+import { Trio } from 'ldrs/react'
+import 'ldrs/react/Trio.css'
 
 const Page = ({params}) => {
 let number = use(params)
@@ -58,9 +59,14 @@ useEffect(() => {
           <div><UserButton/></div>
         </div>
       </nav>
-   <div  className='w-full h-full flex justify-center align-middle'>
-    <div className='text-green-500 text-7xl'> Loading... </div>
-  </div> </>
+      <div className='min-w-full min-h-full flex justify-center align-middle'>
+      <Trio
+  size="150"
+  speed="1.5"
+  color='green'
+    />
+</div>
+   </>
   
   return (
     <>
