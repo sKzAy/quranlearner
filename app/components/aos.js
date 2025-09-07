@@ -8,7 +8,7 @@ const AOSAnimate = () => {
     AOS.init({
       once: true,
       offset: 100,
-      duration: 500,
+      duration: 2000,
       easing: "ease",
     });
   }, []);

@@ -47,7 +47,7 @@ useEffect(() => {
   fetchEnglish()
 }, [])
 
-  if (loading) return <>
+  if (loading) return <div data-aos = "fade-in">
    <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
@@ -66,10 +66,10 @@ useEffect(() => {
   color='green'
     />
 </div>
-   </>
+   </div>
   
   return (
-    <>
+    <div data-aos = "fade-in">
     <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
@@ -112,8 +112,10 @@ useEffect(() => {
           </div>
       
       </div>
-      <Footer/>
-    </>
+      
+      {loading === false ? <Footer/>:<div></div>}
+      
+    </div>
   )
 }
 

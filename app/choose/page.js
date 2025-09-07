@@ -32,7 +32,7 @@ export default function Page(){
     }, [])
 
     if (loading){
-        return  <> <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
+        return  <div data-aos = "fade-in"> <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
           <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/"}><ArrowBack/> Back to home</Link>
@@ -43,17 +43,17 @@ export default function Page(){
           <div><UserButton/></div>
         </div>
       </nav>
-      <div className='min-w-full min-h-full flex justify-center align-middle'>
+      <div data-aos = "fade-in" className='min-w-full min-h-full flex justify-center align-middle'>
       <Trio
   size="150"
   speed="1.5"
   color='green'
     />
 </div>
-      </>
+      </div>
     }
   return (
-    <>
+    <div data-aos = "fade-in">
        <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-green-500 to-green-600 text-white
       p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
@@ -84,8 +84,8 @@ export default function Page(){
         
         }
       </div>
-      <Footer/>
-    </>
+    {loading === false ? <Footer/>:<div></div>}
+    </div>
   )
 }
 

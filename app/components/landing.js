@@ -6,6 +6,7 @@ import Footer from './footer';
 const Landing = () => {
   return (
     <>
+    <div data-aos = "fade-in">
       <div className='text-white bg-gradient-to-r from-green-600 to-blue-400
       flex flex-col justify-center align-middle h-[60vh]'>
         {/* <div className="logo w-fit mx-auto ">
@@ -30,6 +31,7 @@ const Landing = () => {
             <Box number={3}/>
 
         </div>
+      </div>
       </div>
       <Footer/>
     </>

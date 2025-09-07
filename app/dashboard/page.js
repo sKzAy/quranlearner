@@ -8,7 +8,7 @@ const Page = () => {
 
   if (favVerses.length === 0){
     return(
-      <>
+      <div data-aos = "fade-in">
        <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-red-500 to-red-600 text-white
             p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
@@ -31,11 +31,11 @@ const Page = () => {
         </div>
         </div>
       </div>
-      </>
+      </div>
     )
   }
   return (
-    <>
+    <div data-aos = "fade-in">
             <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-red-500 to-red-600 text-white
             p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
@@ -72,7 +72,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
