@@ -85,7 +85,7 @@ useEffect(() => {
           {/* <div><Image src={""} alt = "none" width={20} height={20}></Image></div> */}
         </div>
       <div  className='bigboy shadow-sm rounded-xl w-fit h-fit mx-auto border-gray-100 border-solid '>
-          <div  className="surah w-[75vw] mx-auto bg-green-100  pt-5 p-10 max-md:w-full">
+          <div  className="surah w-full mx-auto bg-green-100  pt-5 p-10 max-md:w-full">
           <div className="title">
               <div className="arabic flex text-green-800 font-bold justify-end">
               <p className='w-fit text-3xl'>{surah.data?.name}</p>
@@ -99,7 +99,7 @@ useEffect(() => {
            {
           surah?.data?.ayahs?.map((surah,index) =>
           <div key={index} >
-         <div className="verses w-[75vw] mx-auto bg-gray-100 p-10 max-md:w-full border-t-2 border-slate-200">
+         <div className="verses w-full mx-auto bg-gray-100 p-10 max-md:w-full border-t-2 border-slate-200">
              <div className="arabic flex text-green-800 font-bold justify-end p-3 gap-3">
               <p className='w-fit text-2xl'>{surah.text}</p>
               <p className='w-fit text-green-900 rounded-full text-2xl'>{surah.numberInSurah}</p>
