@@ -251,7 +251,7 @@ export default function Page(){
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
           <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/"}><ArrowBack/> Back to home</Link>
         </div>
-        <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>Quran Reader</p></div>
+        <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>Quran Searcher</p></div>
         <div className='w-fit mx-auto flex gap-5'>
           <Link className=' hidden cursor-alias hover:text-black transition-all hover:transition-all duration-500' href={'/dashboard'}>My Favorites <Favorite/> </Link>
           <div><UserButton/></div>
@@ -261,10 +261,10 @@ export default function Page(){
 
       <div className='bg-gray-100 p-10 h-screen '>
         <div className='bg-white flex flex-col gap-5 justify-center p-6 rounded-3xl w-[70vw] mx-auto'>
-          <div className="search">
+          <div className="search font-bold max-md:min-w-[90vw] ">
             Search The Quran
           </div>
-          <div className="input flex gap-2">
+          <div className="input flex gap-2 ">
             <input 
               ref={inputRef} 
               className='w-full bg-gray-100 p-2 rounded-xl text-gray-700' 
