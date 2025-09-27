@@ -10,7 +10,7 @@ const Box = ({number}) => {
             Read the Quran
         </div>
         <div className="text w-fit h-[13vh] mx-auto text-center text-gray-400">
-            Explore the holy Quran with Arabic text, translations, and detailed Tafseer commentary
+            Explore the holy Quran with Arabic text and translations
         </div>
         <div className="btn text-center">
             <Link className='hover:text-black duration-500 tranistion-all hover:transition-all bg-gradient-to-r from-green-400 to-green-600 text-white p-3 rounded-xl' href={"/choose"}>Get Started</Link>
@@ -20,7 +20,7 @@ const Box = ({number}) => {
             Search & Discover
         </div>
         <div className="text w-fit h-[13vh] mx-auto text-center text-gray-400">
-            Find specific verses, topics, or explore Surahs with our powerful search functionality.
+            Find specific Surahs with our powerful search functionality.
         </div>
         <div className="btn text-center">
             <Link className='hover:text-black duration-500 tranistion-all hover:transition-all bg-gradient-to-r from-blue-400 to-blue-600 text-white p-3 rounded-xl' href={"/search"}>Get Started</Link>

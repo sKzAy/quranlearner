@@ -16,7 +16,7 @@ const Landing = () => {
             Learn Quran
         </div>
         <div className="text-gray-200 text-center w-[40vw] mx-auto mt-3 text-xl max-md:text-sm max-md:w-[60vw]">
-            Discover the beauty and wisdom of the Holy Quran with translations, commentary, and personal study tools!
+            Discover the beauty and wisdom of the Holy Quran with translations
         </div>
         <div className="quote w-fit mx-auto text-center max-md:text-sm font-semibold max-md:mt-3 mt-5">
            &apos;And We have certainly made the Quran easy for remembrance, so is there any who will remember?&apos;
