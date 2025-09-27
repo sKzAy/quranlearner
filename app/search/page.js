@@ -269,7 +269,7 @@ export default function Page(){
               ref={inputRef} 
               className='w-full bg-gray-100 p-2 rounded-xl text-gray-700' 
               type="text" 
-              placeholder='Search for topics, surah, verses etc'
+              placeholder='eg Al-Fatihah'
               onKeyPress={handleKeyPress}
             /> 
             <button onClick={handleClick} className=' bg-blue-500 p-2 rounded-2xl text-white transition-all hover:text-black hover:transition-all cursor-pointer duration-500 hover:duration-500'>Search</button>
