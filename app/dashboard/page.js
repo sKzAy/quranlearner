@@ -2,8 +2,26 @@ import React from 'react'
 import Link from 'next/link'
 import { UserButton, UserProfile } from '@clerk/nextjs'
 import { ArrowBack, ArrowForward, AutoStories, Search } from '@mui/icons-material'
+import { currentUser } from '@clerk/nextjs/server'
+import { updateUser } from '../lib/actions'
 
-const Page = () => {
+
+const Page = async () => {
+const user = await currentUser()
+
+const userData = {
+  pfp:user.imageUrl,
+  email: user.emailAddresses[0].emailAddress,
+  Id:user.id,
+  name: user.firstName,
+}
+console.log(userData)
+console.log(user)
+updateUser(userData)
+
+
+
+
   let favVerses = []
 
   if (favVerses.length === 0){
@@ -12,11 +30,11 @@ const Page = () => {
        <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-red-500 to-red-600 text-white
             p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
-          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/"}><ArrowBack/> Back to home</Link>
+          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/"}> Back to home</Link>
         </div>
         <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>My DashBoard</p></div>
         <div className='w-fit mx-auto flex gap-5 '>
-          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={'/choose'}>Continue Reading <ArrowForward/></Link>
+          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={'/choose'}>Continue Reading </Link>
           <div><UserButton/></div>
         </div>
       </nav>
@@ -39,11 +57,11 @@ const Page = () => {
             <nav  className='max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-red-500 to-red-600 text-white
             p-6'>
         <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
-          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/"}><ArrowBack/> Back to home</Link>
+          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/"}> Back to home</Link>
         </div>
         <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>My DashBoard</p></div>
         <div className='w-fit mx-auto flex gap-5 '>
-          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={'/choose'}>Continue Reading <ArrowForward/></Link>
+          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={'/choose'}>Continue Reading </Link>
           <div><UserButton/></div>
         </div>
       </nav>
