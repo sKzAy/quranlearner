@@ -49,7 +49,7 @@ const Page = ({ params }) => {
       
       for (let apiUrl of apiUrls) {
         try {
-          console.log('Trying URL:', apiUrl);
+          
           
           let fetchedData = await fetch(apiUrl, {
             method: 'GET',
@@ -62,11 +62,11 @@ const Page = ({ params }) => {
 
           if (fetchedData.ok) {
             dataJson = await fetchedData.json();
-            console.log('Success with URL:', apiUrl);
+           
             break; // Exit loop if successful
           }
         } catch (err) {
-          console.log('Failed with URL:', apiUrl, err);
+        
           continue; // Try next URL
         }
       }
@@ -75,12 +75,12 @@ const Page = ({ params }) => {
         throw new Error('All API attempts failed');
       }
       
-      console.log('API Response:', dataJson);
+   
       setSurahData(dataJson)
       setLoading(false)
       setError(null)
     } catch (error) {
-      console.error("Fetch error details:", error);
+     
       setError(error.message)
       setLoading(false)
       
