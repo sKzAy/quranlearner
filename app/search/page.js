@@ -180,7 +180,7 @@ export default function Page(){
 
       <div className='bg-gray-100 p-10 h-screen '>
         <div className='bg-white flex flex-col gap-5 justify-center p-6 rounded-3xl w-[70vw] mx-auto'>
-          <div className="search font-bold max-md:min-w-[95vw] ">
+          <div className="search font-bold max-md:min-w-[90] ">
             Search The Quran
           </div>
           <div className="input flex gap-2 ">
