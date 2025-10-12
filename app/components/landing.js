@@ -28,7 +28,7 @@ const Landing = () => {
         <div className="boxes p-7 flex gap-3 w-fit mx-auto max-md:flex-col">
             <Box number={1}/>
             <Box number={2}/>
-            {/* <Box number={3}/> */}
+            <Box number={3}/>
 
         </div>
       </div>
