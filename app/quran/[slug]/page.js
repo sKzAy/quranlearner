@@ -129,16 +129,16 @@ const Page = ({ params }) => {
         <div className="surah w-full mx-auto bg-green-100  pt-5 p-10 max-md:w-full">
           <div className="title">
             <div className="arabic flex text-green-800 font-bold justify-end">
-              <p className='w-fit text-3xl'>{surah.data?.name}</p>
+              <p className='w-fit text-3xl'>{surah?.data?.name || ""}</p>
             </div>
             <div className='english w-fit mx-auto text-green-800 font-bold text-2xl'>
-              {surah.data?.number} - {surah.data?.englishName} - {surah.data?.englishNameTranslation}
+              {surah?.data?.number || ""} - {surah?.data?.englishName || ""} - {surah?.data?.englishNameTranslation || ""}
             </div>
           </div>
         </div>
         <div className='mb-10'>
           {
-            ayahs.map((ayah, index) =>
+            Array.isArray(ayahs) && ayahs.length > 0 ? ayahs.map((ayah, index) =>
               
               <div key={index}>
                 
@@ -194,17 +194,19 @@ const Page = ({ params }) => {
                       </AlertDialogContent>
                     </AlertDialog>
                   <div className="arabic flex text-green-800 font-bold justify-end p-3 gap-3">
-                    <p className='w-fit text-2xl'>{ayah.text}</p>
-                    <p className='w-fit text-green-900 rounded-full text-2xl'>{ayah.numberInSurah}</p>
+                    <p className='w-fit text-2xl'>{ayah?.text || ""}</p>
+                    <p className='w-fit text-green-900 rounded-full text-2xl'>{ayah?.numberInSurah || ""}</p>
                     
                   </div>
                   <p>
-                    {surahEng?.data?.ayahs
-                      ? surahEng.data.ayahs[index]?.text
-                      : null}
+                    {surahEng?.data?.ayahs && surahEng.data.ayahs[index]
+                      ? surahEng.data.ayahs[index].text
+                      : ""}
                   </p>
                 </div>
               </div>
+            ) : (
+              <div className="text-center text-gray-500 p-10">No verses found.</div>
             )
           }
         </div>
