@@ -9,9 +9,6 @@ const Landing = () => {
     <div data-aos = "fade-in">
       <div className='text-white bg-gradient-to-r from-green-600 to-blue-400
       flex flex-col justify-center align-middle h-[60vh]'>
-        {/* <div className="logo w-fit mx-auto ">
-           <ExploreOutlinedIcon/>
-        </div> */}
         <div className="heading text-7xl w-fit mx-auto max-md:text-5xl font-bold">
             Learn Quran
         </div>
