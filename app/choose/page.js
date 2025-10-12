@@ -12,7 +12,7 @@ import { ArrowDropDownCircleRounded,Search,SpaceDashboardRounded } from '@mui/ic
 
 
 export default function Page(){
-  try{
+  
     const [surahArray,setSurahArray] = useState([]);
     let router = useRouter()
     const [loading,setLoading] = useState(true)
@@ -31,7 +31,7 @@ export default function Page(){
     }
     useEffect(() => {
       fetchSurahs()
-    }, [])
+    },[])
 
     if (loading) return <>
     <div>
@@ -131,12 +131,5 @@ export default function Page(){
     {/* <Footer/> */}
     </div>
   )
-  }catch(error){
-    return(
-      <div className='min-h-screen flex justify-center items-center text-center p-5'>
-        <div className='text-red-600 text-2xl font-bold'>An error occurred while loading the page. Please Reload</div>
-      </div>
-    )
-  }
 
 }

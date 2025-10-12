@@ -2,10 +2,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { useEffect, useState,useRef } from 'react'
-import { use } from 'react'
 import Footer from '@/app/components/footer'
 import { UserButton } from '@clerk/nextjs'
-import { ArrowBack, ArrowForward, Favorite, FavoriteOutlined,FavoriteBorder } from '@mui/icons-material'
+import { FavoriteBorder } from '@mui/icons-material'
 import 'ldrs/react/Trio.css'
 import { onLikeClick } from '@/app/lib/api'
 import { toast } from 'sonner'
@@ -25,6 +24,7 @@ import {ArrowDropDownCircleRounded} from '@mui/icons-material'
 import {AutoStories,SpaceDashboardRounded,} from '@mui/icons-material'
 
 const Page = ({ params }) => {
+
   let inputRef = useRef();
   let number = React.use(params);
 
@@ -53,8 +53,6 @@ const Page = ({ params }) => {
     setSurahEng(dataJsonEng)
     setLoading(false)
   }
-
-
   useEffect(() => {
     fetchArabic()
   }, [])

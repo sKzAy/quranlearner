@@ -9,7 +9,6 @@ import { ArrowDropDownCircleRounded } from '@mui/icons-material'
 import { AutoStories,SpaceDashboardRounded } from '@mui/icons-material'
 
 export default function Page(){
-  try{
   let hRef = useRef()
   let router = useRouter()
   let inputRef = useRef()
@@ -238,11 +237,3 @@ export default function Page(){
     </>
   )
   }
-
-  catch(error){
-    return(
-      <div className='min-h-screen flex justify-center items-center text-center p-5'>
-        <div className='text-red-600 text-2xl font-bold'>An error occurred while loading the page.Please Reload.</div>
-      </div>
-    )
-    }}
