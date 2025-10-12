@@ -130,7 +130,7 @@ const Page = async () => {
                   <div className="english text-left p-5 text-xl">{englishText}</div>
                   {
                    ( verseObj.message !== "") ?
-                  <div className='text-left p-5 text-xl'>Your Note: <div className="message text-left p-5 italic text-gray-600">"{verseObj.message}"</div></div>: <div></div>}
+                  <div className='text-left p-5 text-xl'>Your Note: <div className="message text-left p-5 italic text-gray-600">&quot;{verseObj.message}&quot;</div></div>: <div></div>}
                 </div>
               );
             })}
