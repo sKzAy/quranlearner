@@ -63,10 +63,10 @@ const Page = async () => {
         </div>
       </nav>
       <div className='min-h-screen bg-gray-100 pt-5'>
-      <div className='bg-white w-fit h-fit mx-auto rounded-xl p-16'>
-        <div className='text-3xl text-center p-5'>No Favorite Verses Yet</div>
-        <div className="start text-gray-600 text-lg w-[40vw] text-center mx-auto">Start building your personal collection of meaningful verses by adding favorites while reading or searching the Quran.</div>
-        <div className='pt-10 flex justify-center gap-5'>
+      <div className='bg-white w-fit h-fit mx-auto rounded-xl p-1'>
+        <div className='text-2xl text-center p-8'>No Favorite Verses</div>
+        <div className="start text-gray-600 text-lg w-fit text-center mx-auto">Build your own collection! </div>
+        <div className='pb-5 pt-10 flex gap-5 max-md:flex-col max-md:gap-3 items-center justify-center'>
           <Link href={"/choose"}> <div className="btn1 hover:text-black transition-all hover:transition-all duration-400 w-fit bg-green-600 p-3 rounded-full text-white flex gap-3">Start Reading <AutoStories/> </div></Link>
           <Link href={"/search"}><div className="btn1 hover:text-black transition-all hover:transition-all duration-400 w-fit bg-blue-600 p-3 rounded-full text-white flex gap-3">Start Searching <Search/> </div></Link>
         </div>

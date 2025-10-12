@@ -190,7 +190,8 @@ export default function Page(){
               placeholder='eg: Al-Fatihah or 1'
               onKeyPress={handleKeyPress}
             /> 
-            <button onClick={handleClick} className=' bg-blue-500 p-2 rounded-2xl text-white transition-all hover:text-black hover:transition-all cursor-pointer duration-500 hover:duration-500 flex'><Search/> Search</button>
+            <button onClick={handleClick} className='md:hidden bg-blue-500 p-2 rounded-2xl text-white transition-all hover:text-black hover:transition-all cursor-pointer duration-500 hover:duration-500 flex'><Search/></button>
+            <button onClick={handleClick} className='max-md:hidden bg-blue-500 p-2 rounded-2xl text-white transition-all hover:text-black hover:transition-all cursor-pointer duration-500 hover:duration-500 flex'><Search/> Search</button>
           </div>
           <div className='text-gray-500 text-sm'>Try searching for any surah by name or number (1-114)</div>
         </div>
