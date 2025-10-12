@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/alert-dialog"
 import {ArrowDropDownCircleRounded} from '@mui/icons-material'
 import {AutoStories,SpaceDashboardRounded,} from '@mui/icons-material'
+import { SignedIn } from '@clerk/nextjs'
 
 const Page = ({ params }) => {
 
@@ -143,7 +144,7 @@ const Page = ({ params }) => {
               <div key={index}>
                 
                 <div className="verses  w-[95vw] mx-auto bg-gray-100 p-10 max-md:w-full border-t-2 border-slate-200">
-                  <AlertDialog>
+                 <SignedIn> <AlertDialog>
                       <AlertDialogTrigger className="cursor-pointer text-sm text-red-400 p-1 "> <FavoriteBorder/> </AlertDialogTrigger>
                       <AlertDialogContent>
                         <AlertDialogHeader>
@@ -193,6 +194,7 @@ const Page = ({ params }) => {
                         </AlertDialogFooter>
                       </AlertDialogContent>
                     </AlertDialog>
+                    </SignedIn>
                   <div className="arabic flex text-green-800 font-bold justify-end p-3 gap-3">
                     <p className='w-fit text-2xl'>{ayah?.text || ""}</p>
                     <p className='w-fit text-green-900 rounded-full text-2xl'>{ayah?.numberInSurah || ""}</p>
