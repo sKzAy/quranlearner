@@ -12,6 +12,7 @@ import { ArrowDropDownCircleRounded,Search,SpaceDashboardRounded } from '@mui/ic
 
 
 export default function Page(){
+  try{
     const [surahArray,setSurahArray] = useState([]);
     let router = useRouter()
     const [loading,setLoading] = useState(true)
@@ -100,7 +101,7 @@ export default function Page(){
   className="pg bg-gray-100 h-fit flex justify-center items-center flex-wrap p-5 gap-5 text-center
       max-md:flex-col"
 >
-  {surahArray.map((surah) => (
+  {surahArray?.map((surah) => (
     <div
       onClick={() => router.push(`quran/${surah.number}`)}
       key={surah.number}
@@ -130,6 +131,12 @@ export default function Page(){
     {/* <Footer/> */}
     </div>
   )
+  }catch(error){
+    return(
+      <div className='min-h-screen flex justify-center items-center text-center p-5'>
+        <div className='text-red-600 text-2xl font-bold'>An error occurred while loading the page. Please Reload</div>
+      </div>
+    )
+  }
+
 }
-
-

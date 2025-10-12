@@ -10,6 +10,7 @@ import { ArrowDropDownCircleRounded } from '@mui/icons-material'
 
 
 const Page = async () => {
+  try{
   let userName = (await currentUser()).firstName
   const user = await currentUser()
   addClerkUserToDb(user.id,user.firstName)
@@ -63,7 +64,7 @@ const Page = async () => {
         </div>
       </nav>
       <div className='min-h-screen bg-gray-100 pt-5'>
-      <div className='bg-white w-fit h-fit mx-auto rounded-xl p-1'>
+      <div className='bg-white w-fit h-fit mx-auto rounded-xl p-1 md:w-[60vw]'>
         <div className='text-2xl text-center p-8'>No Favorite Verses</div>
         <div className="start text-gray-600 text-lg w-fit text-center mx-auto">Build your own collection! </div>
         <div className='pb-5 pt-10 flex gap-5 max-md:flex-col max-md:gap-3 items-center justify-center'>
@@ -141,6 +142,13 @@ const Page = async () => {
     </div>
     </>
   )
-}
+  }
+  catch(error){
+    return(
+      <div className='min-h-screen flex justify-center items-center text-center p-5'>
+        <div className='text-red-600 text-2xl font-bold'>An error occurred while loading the page. Please Reload</div>
+      </div>
+    )
+  }}
 
 export default Page
