@@ -1,12 +1,8 @@
 
 "use client"
 import React, { useRef, useState } from 'react'
-import Link from 'next/link'
 import { Search } from '@mui/icons-material'
-import { UserButton } from '@clerk/nextjs'
 import { useRouter } from 'next/navigation'
-import { ArrowDropDownCircleRounded } from '@mui/icons-material'
-import { AutoStories,SpaceDashboardRounded } from '@mui/icons-material'
 import SearchNav from '../components/searchNav'
 import SearchNavMobile from '../components/searchNavMobile'
 

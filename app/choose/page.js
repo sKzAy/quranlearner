@@ -1,14 +1,9 @@
 "use client"
 import { useState, useEffect, } from 'react'
 import React from 'react'
-import Link from 'next/link'
 import { useRouter, } from 'next/navigation'
-import Footer from '../components/footer'
-import { UserButton } from '@clerk/nextjs'
-import { ArrowBack, ArrowForward, Favorite } from '@mui/icons-material'
 import { Trio } from 'ldrs/react'
 import 'ldrs/react/Trio.css'
-import { ArrowDropDownCircleRounded, Search, SpaceDashboardRounded } from '@mui/icons-material'
 import MobileNav from '../components/mobileNav'
 import Navbar from '../components/nav.js'
 

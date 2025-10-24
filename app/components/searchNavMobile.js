@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { UserButton } from '@clerk/nextjs'
 import {ArrowDropDownCircleRounded, SpaceDashboardRounded,AutoStories} from '@mui/icons-material'
 const SearchNavMobile = () => {
   return (

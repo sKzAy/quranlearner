@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { ArrowDropDownCircleRounded,Search,AutoStories } from '@mui/icons-material'
+import {Search,AutoStories } from '@mui/icons-material'
 import { UserButton } from '@clerk/nextjs'
 
 const DashNav = () => {

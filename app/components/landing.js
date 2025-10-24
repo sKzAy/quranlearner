@@ -1,8 +1,5 @@
 import React from 'react'
-import ExploreIcon from '@mui/icons-material/Explore';
-import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import Box from './box';
-import Footer from './footer';
 const Landing = () => {
   return (
     <>
@@ -26,7 +23,6 @@ const Landing = () => {
             <Box number={1}/>
             <Box number={2}/>
             <Box number={3}/>
-
         </div>
       </div>
       </div>
@@ -34,5 +30,4 @@ const Landing = () => {
     </>
   )
 }
-
 export default Landing

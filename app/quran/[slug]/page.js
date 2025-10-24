@@ -1,10 +1,7 @@
 
 "use client"
 import React from 'react'
-import Link from 'next/link'
 import { useEffect, useState, useRef } from 'react'
-import Footer from '@/app/components/footer'
-import { UserButton } from '@clerk/nextjs'
 import { FavoriteBorder } from '@mui/icons-material'
 import 'ldrs/react/Trio.css'
 import { onLikeClick } from '@/app/lib/api'
@@ -21,8 +18,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
-import { ArrowDropDownCircleRounded } from '@mui/icons-material'
-import { AutoStories, SpaceDashboardRounded, } from '@mui/icons-material'
 import { SignedIn } from '@clerk/nextjs'
 import ReadNavMobile from '@/app/components/readNavMobile'
 import ReadNav from '@/app/components/readNav'

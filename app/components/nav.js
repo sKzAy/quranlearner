@@ -1,8 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { UserButton } from '@clerk/nextjs'
-import { SpaceDashboardRounded,Search,ArrowDropDownCircleRounded } from '@mui/icons-material'
-import { Trio } from 'ldrs/react'
+import { SpaceDashboardRounded,Search} from '@mui/icons-material'
 const Navbar = () => {
   return (
     <>
