@@ -8,6 +8,8 @@ import { addClerkUserToDb } from '../lib/actions'
 import { getUserLiked } from '../lib/actions'
 import DeleteProp from '../components/delete'
 import { ArrowDropDownCircleRounded } from '@mui/icons-material'
+import DashNavMobile from '../components/dashNavMobile'
+import DashNav from '../components/dashNav'
 
 const Page = async () => {
   let userName = (await currentUser()).firstName
@@ -68,30 +70,10 @@ const Page = async () => {
     return (
       <>
         <div>
-          <nav className='flex justify-between align-middle items-center md:hidden bg-gradient-to-r from-red-500 to-red-600 text-white p-6'>
-            <details className="dropdown relative z-[9999]">
-              <summary className="btn m-1 list-none z-[9999]">
-                <ArrowDropDownCircleRounded />
-              </summary>
-              <ul className="menu absolute left-0 top-full bg-red-700 rounded-box w-52 p-3 shadow-sm z-[9999]">
-                <li className='shadow p-2'><Link href="/search"><Search/> Search</Link></li>
-                <li className='shadow p-2'><Link href="/choose"> <AutoStories/> Continue Reading</Link></li>
-              </ul>
-            </details>
-            <div className='text-2xl font-bold flex gap-2'>Dashboard<div><UserButton /></div></div>
-          </nav>
+          <DashNavMobile/>
         </div>
         <div className='' data-aos="fade-in">
-          <nav className='max-md:hidden max-md:flex-col max-md:justify-center flex justify-between bg-gradient-to-r from-red-500 to-red-600 text-white p-6'>
-            <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
-              <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/search"}><Search/>Search</Link>
-            </div>
-            <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>My DashBoard</p></div>
-            <div className='w-fit mx-auto flex gap-5 '>
-              <div><UserButton/></div>
-              <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={'/choose'}> <AutoStories/> Continue Reading</Link>
-            </div>
-          </nav>
+          <DashNav/>
           <div className='min-h-screen bg-gray-100 pt-5'>
             <div className='bg-white w-fit h-fit mx-auto rounded-xl p-1 md:w-[60vw]'>
               <div className='text-2xl text-center p-8'>No Favorite Verses</div>

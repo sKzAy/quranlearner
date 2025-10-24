@@ -24,6 +24,8 @@ import {
 import { ArrowDropDownCircleRounded } from '@mui/icons-material'
 import { AutoStories, SpaceDashboardRounded, } from '@mui/icons-material'
 import { SignedIn } from '@clerk/nextjs'
+import ReadNavMobile from '@/app/components/readNavMobile'
+import ReadNav from '@/app/components/readNav'
 
 const Page = ({ params }) => {
 
@@ -100,29 +102,9 @@ const Page = ({ params }) => {
   if (error) return (
     <div data-aos="fade-in">
       <div className=' md:hidden'>
-        <nav className='flex justify-between align-middle items-center bg-gradient-to-r from-green-500 to-green-600 text-white p-6'>
-          <details className="dropdown relative duration-500 animate-in">
-            <summary className="btn m-1 list-none"><ArrowDropDownCircleRounded /></summary>
-            <ul className="bg-green-700 menu absolute left-0 top-full bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm">
-              <li className='shadow p-2'><Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/choose"}> <AutoStories /> Select Surah</Link></li>
-              <li className='shadow p-2'><Link className=' cursor-pointer hover:text-black transition-all hover:transition-all duration-500' href={'/dashboard'}>Dashboard <SpaceDashboardRounded /></Link></li>
-            </ul>
-          </details>
-          <div className='text-2xl font-bold flex gap-2'>Quran Reader <div><UserButton /></div></div>
-        </nav>
+      <ReadNavMobile/>
       </div>
-
-      <nav className='max-md:hidden max-md:flex-col max-md:justify-center flex justify-center align-middle items-center bg-gradient-to-r from-green-500 to-green-600 text-white p-6'>
-        <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
-          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/choose"}> <AutoStories /> Select Surah</Link>
-        </div>
-        <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>Quran Reader</p></div>
-        <div className='w-fit mx-auto flex gap-5'>
-          <div><UserButton /></div>
-          <Link className=' cursor-pointer hover:text-black transition-all hover:transition-all duration-500' href={'/dashboard'}>Dashboard <SpaceDashboardRounded /></Link>
-        </div>
-      </nav>
-
+     <ReadNav/>
       <div className="min-h-[60vh] flex flex-col justify-center items-center text-center p-8">
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative max-w-md">
           <strong className="font-bold">Error loading data! </strong>
@@ -144,29 +126,11 @@ const Page = ({ params }) => {
   if (loading) return (
     <div data-aos="fade-in">
       <div>
-        <nav className='flex justify-between align-middle items-center md:hidden bg-gradient-to-r from-green-500 to-green-600 text-white p-6'>
-          <details className="dropdown relative duration-500 animate-in">
-            <summary className="btn m-1 list-none"><ArrowDropDownCircleRounded /></summary>
-            <ul className="bg-green-700 menu absolute left-0 top-full bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm">
-              <li className='shadow p-2'><Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/choose"}> <AutoStories /> Select Surah</Link></li>
-              <li className='shadow p-2'><Link className=' cursor-pointer hover:text-black transition-all hover:transition-all duration-500' href={'/dashboard'}>Dashboard <SpaceDashboardRounded /></Link></li>
-            </ul>
-          </details>
-          <div className='text-2xl font-bold flex gap-2'>Quran Reader <div><UserButton /></div></div>
-        </nav>
+       <ReadNavMobile/>
       </div>
-
-      <nav className='max-md:hidden max-md:flex-col max-md:justify-center flex justify-center align-middle items-center bg-gradient-to-r from-green-500 to-green-600 text-white p-6'>
-        <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
-          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/choose"}> <AutoStories /> Select Surah</Link>
-        </div>
-        <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>Quran Reader</p></div>
-        <div className='w-fit mx-auto flex gap-5'>
-          <Link className=' cursor-alias hover:text-black transition-all hover:transition-all duration-500' href={'/dashboard'}>Dashboard <SpaceDashboardRounded /></Link>
-          <div><UserButton /></div>
-        </div>
-      </nav>
-
+      <div>
+        <ReadNav/>
+      </div>
       <div data-aos="fade-in" className='min-h-[80vh] flex justify-center items-center text-center'>
         <Trio
           size="150"
@@ -181,33 +145,12 @@ const Page = ({ params }) => {
 
   return (<>
     <div className=' md:hidden'>
-      <nav className='flex justify-between align-middle items-center bg-gradient-to-r from-green-500 to-green-600 text-white p-6'>
-        <details className="dropdown relative duration-500 animate-in">
-          <summary className="btn m-1 list-none"><ArrowDropDownCircleRounded /></summary>
-          <ul className="bg-green-700 menu absolute left-0 top-full bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm">
-            <li className='shadow p-2'><Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/choose"}> <AutoStories /> Select Surah</Link></li>
-            <li className='shadow p-2'><Link className=' cursor-pointer hover:text-black transition-all hover:transition-all duration-500' href={'/dashboard'}>Dashboard <SpaceDashboardRounded /></Link></li>
-          </ul>
-        </details>
-        <div className='text-2xl font-bold flex gap-2'>Quran Reader <div><UserButton /></div></div>
-      </nav>
+       <ReadNavMobile/>
     </div>
-
     <div data-aos="fade-in">
-      <nav className='max-md:hidden max-md:flex-col max-md:justify-center flex justify-center align-middle items-center bg-gradient-to-r from-green-500 to-green-600 text-white p-6'>
-        <div className='flex justify-center align-middle gap-5 w-fit mx-auto'>
-          <Link className=' hover:text-black transition-all hover:transition-all duration-500' href={"/choose"}> <AutoStories /> Select Surah</Link>
-        </div>
-        <div> <p className='text-2xl font-bold text-center w-fit mx-auto'>Quran Reader</p></div>
-        <div className='w-fit mx-auto flex gap-5'>
-          <div><UserButton /></div>
-          <Link className=' cursor-pointer hover:text-black transition-all hover:transition-all duration-500' href={'/dashboard'}>Dashboard <SpaceDashboardRounded /></Link>
-        </div>
-      </nav>
-
+     <ReadNav/>
       <div className='flex justify-between'>
       </div>
-
       <div className='bigboy shadow-sm rounded-xl w-fit h-fit mx-auto border-gray-100 border-solid '>
         <div className="surah w-full mx-auto bg-green-100  pt-5 p-10 max-md:w-full">
           <div className="title">
