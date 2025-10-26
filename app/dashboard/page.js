@@ -10,58 +10,54 @@ import DeleteProp from '../components/delete'
 import { ArrowDropDownCircleRounded } from '@mui/icons-material'
 import DashNavMobile from '../components/dashNavMobile'
 import DashNav from '../components/dashNav'
+import FetchSurahObject from '../lib/quranFunctions'
 
 const Page = async () => {
-  let userName = (await currentUser()).firstName
+  let userName = (await currentUser()).firstName //geting user's first name
   const user = await currentUser()
-  addClerkUserToDb(user.id, user.firstName)
-  let liked = await getUserLiked(user.id)
-  let favVerses = liked[0].liked
+  addClerkUserToDb(user.id, user.firstName) //adding the user to db
+  let liked = await getUserLiked(user.id) 
+  let favVerses = liked[0].liked //getting all the liked verses
   let fetchedVerse = []
 
-  async function fetchFavVerses() {
-    let i = 0
-    while (i < favVerses.length) {
-      let surahNo = favVerses[i].surah
-      let verseNo = favVerses[i].verse
-      let message = favVerses[i].message
+ async function fetchFavVerses() {
+  let i = 0
+  while (i < favVerses.length) {
+    let surahNo = favVerses[i].surah
+    let verseNo = favVerses[i].verse
+    let message = favVerses[i].message
+    
+    try {
+      let fetchedData = await FetchSurahObject(surahNo) // ✅ Fixed: use surahNo
+      let verseIndex = verseNo - 1
+      let verseData = fetchedData.verses[verseIndex]
       
-      try {
-        // Using the new API structure
-        let fetchedData = await fetch(`https://alquran-api.pages.dev/api/quran/surah/${surahNo}/verse/${verseNo}`)
-        
-        if (!fetchedData.ok) {
-          throw new Error(`HTTP error! status: ${fetchedData.status}`)
-        }
-        
-        let dataJson = await fetchedData.json()
-        
-        fetchedVerse.push({
-          "surah": surahNo,
-          "verse": verseNo,
-          "message": message,
-          "arabic": dataJson.verse.text, // Arabic text from new API
-          "english": dataJson.verse.translation, // English translation from new API
-          "surahName": dataJson.surah.name, // Arabic surah name
-          "surahTransliteration": dataJson.surah.transliteration // English surah name
-        })
-      } catch (error) {
-        console.error(`Error fetching verse ${surahNo}:${verseNo}:`, error)
-        // Fallback: push with empty texts if fetch fails
-        fetchedVerse.push({
-          "surah": surahNo,
-          "verse": verseNo,
-          "message": message,
-          "arabic": "",
-          "english": "",
-          "surahName": "",
-          "surahTransliteration": ""
-        })
-      }
-      i++
+      fetchedVerse.push({
+        "surah": surahNo,
+        "verse": verseNo,
+        "message": message,
+        "arabic": verseData.verseArabic,
+        "english": verseData.verse,
+        "surahName": fetchedData.surahNameArabic,
+        "surahTransliteration": fetchedData.surahName
+      })
+    } catch (error) {
+      console.error(`Error fetching verse ${surahNo}:${verseNo}:`, error)
+      fetchedVerse.push({
+        "surah": surahNo,
+        "verse": verseNo,
+        "message": message,
+        "arabic": "",
+        "english": "",
+        "surahName": "",
+        "surahTransliteration": ""
+      })
     }
+    i++
   }
+}
 
+  console.log(fetchedVerse)
   if (favVerses.length > 0) {
     await fetchFavVerses()
   }
@@ -128,10 +124,10 @@ const Page = async () => {
                       <div className='flex justify-start gap-2 align-middle p-2'>
                         <div> <DeleteProp props={{surah:verseObj.surah,verse:verseObj.verse}}/></div>
                         <div className="bg-red-200 surah rounded-full p-2">
-                          {verseObj.surahName || `Surah ${verseObj.surah}`}
+                          {verseObj.surahName}
                         </div>
                         <div className="bg-red-200 surah rounded-full p-2">
-                          {verseObj.surahNo || `Surah ${verseObj.surah}`}
+                          Surah {verseObj.surah}
                         </div>
                         <div className="bg-red-200 ayah rounded-full p-2">Verse {verseObj.verse}</div>
                       </div>
