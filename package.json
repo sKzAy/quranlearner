@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint"
   },
+  "type": "module",
   "dependencies": {
     "type":"module",
     "@clerk/nextjs": "^6.31.9",
