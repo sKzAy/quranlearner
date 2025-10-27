@@ -12,6 +12,7 @@ import DashNav from '../components/dashNav'
 import FetchSurahObject from '../lib/quranFunctions'
 
 
+
 const Page = async () => {
   let userName = (await currentUser()).firstName //geting user's first name
   const user = await currentUser()
@@ -40,6 +41,7 @@ const Page = async () => {
         "message": message,
         "arabic": verseData.verseArabic,
         "english": verseData.verse,
+        "urdu":verseData.verseUrdu,
         "surahName": fetchedData.surahNameArabic,
         "surahTransliteration": fetchedData.surahName
       })
