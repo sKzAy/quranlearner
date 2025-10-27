@@ -26,6 +26,7 @@ const Page = ({params}) => {
   const inputRef = useRef()
   const slug = React.use(params).slug
 
+  const[urdu,setUrdu] = useState(false)
   const [surahData, setSurahData] = useState(null)
   const [loading, setLoading] = useState(false)
 
@@ -62,8 +63,16 @@ const Page = ({params}) => {
       <div className='bigboy shadow-sm rounded-xl w-fit h-fit mx-auto border-gray-100 border-solid '>
         <div className="surah w-full mx-auto bg-green-100  pt-5 p-10 max-md:w-full">
           <div className="title">
-            <div className="arabic flex text-green-800 font-bold justify-end">
-              <p className='w-fit text-3xl'>{surahData.surahNameArabic}</p>
+            <div className="arabic flex justify-between">
+               <p className='max-md: text-white text-sm bg-green-700 rounded-sm p-2 transition-all duration-300 hover:transition-all hover:duration-300 hover:font-bold cursor-pointer' onClick={()=>{
+                if(urdu === false){
+                  setUrdu(true)
+                }
+                else{
+                  setUrdu(false)
+                }
+               }}>{(urdu === false)?<p>Urdu</p>:<p>English</p>}</p>
+              <p className='w-fit text-3xl font-bold text-green-800'>{surahData.surahNameArabic}</p>
             </div>
             <div className='english w-fit mx-auto text-green-800 font-bold text-2xl'>
               {Number(slug)} - {surahData.surahName} - {surahData?.surahNameTranslation}
@@ -113,8 +122,8 @@ const Page = ({params}) => {
                     <p className='w-fit text-2xl'>{verse.verseArabic}</p>
                     <p className='w-fit text-green-900 rounded-full text-2xl'>{index+1}</p>
                   </div>
-                  <p className="text-gray-700 mt-2">
-                    {verse.verse}
+                  <p className="text-gray-700 mt-2 text-lg">
+                    {(urdu === false)?<p>{verse.verse}</p>:<p className='text-right'>{verse.verseUrdu}</p>}
                   </p>
                 </div>
               </div>
