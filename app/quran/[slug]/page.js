@@ -87,8 +87,12 @@ const Page = ({params}) => {
         <div className='mb-10'>
           {
             surahData.verses.length > 0 ? surahData.verses.map((verse, index) => (
+              
               <div key={index}>
+               
                 <div className="verses  w-[95vw] mx-auto bg-gray-100 p-10 max-md:w-full border-t-2 border-slate-200">
+                  <div className='flex justify-between'>
+                    
                   <SignedIn>
                     <AlertDialog>
                       <AlertDialogTrigger className="cursor-pointer text-sm text-red-400 p-1 "> <FavoriteBorder /> </AlertDialogTrigger>
@@ -126,10 +130,12 @@ const Page = ({params}) => {
                       </AlertDialogContent>
                     </AlertDialog>
                   </SignedIn>
+                   <p className='w-fit text-green-900 rounded-full text-2xl'>{index+1}</p>
+                  </div>
 
                   <div className="arabic flex text-green-800 font-bold justify-end p-3 gap-3">
                     <p className='w-fit text-2xl'>{verse.verseArabic}</p>
-                    <p className='w-fit text-green-900 rounded-full text-2xl'>{index+1}</p>
+                    
                   </div>
                   <div className="text-gray-700 mt-2 text-lg">
                     {(urdu === false)?<p className=''>{verse.verse}</p>:<p className='text-right font-bold'>{verse.verseUrdu}</p>}
