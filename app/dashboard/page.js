@@ -127,10 +127,7 @@ const Page = async () => {
                       <div className='flex justify-start gap-2 align-middle p-2'>
                         <div> <DeleteProp props={{surah:verseObj.surah,verse:verseObj.verse}}/></div>
                         <div className="bg-red-200 surah rounded-full p-2">
-                          {verseObj.surahName}
-                        </div>
-                        <div className="bg-red-200 surah rounded-full p-2">
-                          Surah {verseObj.surah}
+                          {verseObj.surahTransliteration}
                         </div>
                         <div className="bg-red-200 ayah rounded-full p-2">Verse {verseObj.verse}</div>
                       </div>
