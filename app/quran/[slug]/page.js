@@ -122,9 +122,9 @@ const Page = ({params}) => {
                     <p className='w-fit text-2xl'>{verse.verseArabic}</p>
                     <p className='w-fit text-green-900 rounded-full text-2xl'>{index+1}</p>
                   </div>
-                  <p className="text-gray-700 mt-2 text-lg">
+                  <div className="text-gray-700 mt-2 text-lg">
                     {(urdu === false)?<p>{verse.verse}</p>:<p className='text-right'>{verse.verseUrdu}</p>}
-                  </p>
+                  </div>
                 </div>
               </div>
             )) : (
