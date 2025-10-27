@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Link from 'next/link'
 import { UserButton } from '@clerk/nextjs'
@@ -12,11 +11,14 @@ import DashNavMobile from '../components/dashNavMobile'
 import DashNav from '../components/dashNav'
 import FetchSurahObject from '../lib/quranFunctions'
 
+
 const Page = async () => {
   let userName = (await currentUser()).firstName //geting user's first name
   const user = await currentUser()
   addClerkUserToDb(user.id, user.firstName) //adding the user to db
   let liked = await getUserLiked(user.id) 
+  console.log(liked)
+  console.log("liked ^")
   let favVerses = liked[0].liked //getting all the liked verses
   let fetchedVerse = []
 
@@ -57,7 +59,6 @@ const Page = async () => {
   }
 }
 
-  console.log(fetchedVerse)
   if (favVerses.length > 0) {
     await fetchFavVerses()
   }

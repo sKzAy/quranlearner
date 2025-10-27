@@ -21,11 +21,12 @@ import { SignedIn } from '@clerk/nextjs'
 import ReadNavMobile from '@/app/components/readNavMobile'
 import ReadNav from '@/app/components/readNav'
 import FetchSurahObject from '@/app/lib/quranFunctions.js'
-
 const Page = ({params}) => {
+  
+
+
   const inputRef = useRef()
   const slug = React.use(params).slug
-
   const[urdu,setUrdu] = useState(false)
   const [surahData, setSurahData] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -63,15 +64,15 @@ const Page = ({params}) => {
       <div className='bigboy shadow-sm rounded-xl w-fit h-fit mx-auto border-gray-100 border-solid '>
         <div className="surah w-full mx-auto bg-green-100  pt-5 p-10 max-md:w-full">
           <div className="title">
-            <div className="arabic flex justify-between">
-               <p className='max-md: text-white text-sm bg-green-700 rounded-sm p-2 transition-all duration-300 hover:transition-all hover:duration-300 hover:font-bold cursor-pointer' onClick={()=>{
+            <div className="arabic flex justify-between max-md:mb-3">
+               <div className='text-white text-sm bg-green-700 rounded-sm p-2 transition-all duration-300 hover:transition-all hover:duration-300 hover:font-bold cursor-pointer text-center' onClick={()=>{
                 if(urdu === false){
                   setUrdu(true)
                 }
                 else{
                   setUrdu(false)
                 }
-               }}>{(urdu === false)?<p>Urdu</p>:<p>English</p>}</p>
+               }}>{(urdu === false)?<p>Urdu</p>:<p>English</p>}</div>
               <p className='w-fit text-3xl font-bold text-green-800'>{surahData.surahNameArabic}</p>
             </div>
             <div className='english w-fit mx-auto text-green-800 font-bold text-2xl'>
@@ -104,14 +105,22 @@ const Page = ({params}) => {
                             const verseNumber = index+1
                             const message = ""
                             await onLikeClick(numberSurah, verseNumber, message)
-                            toast.success("Added to liked verses!")
+                            toast.success("Successfully added!", {
+                                       unstyled: true,
+                                       className:
+                                         "bg-green-400 text-white border border-green-400 border-2 px-4 py-2 rounded-md flex gap-2 shadow items-center justify-center",
+                                     });
                           }}>Skip</AlertDialogCancel>
                           <AlertDialogAction className={"bg-red-500"} onClick={async () => {
                             const numberSurah = Number(slug)
                             const verseNumber = index + 1
                             const message = inputRef.current?.value ?? ""
                             await onLikeClick(numberSurah, verseNumber, message)
-                            toast.success("Added to liked verses!")
+                             toast.success("Successfully added!", {
+                                        unstyled: true,
+                                        className:
+                                          "bg-green-400 text-white border border-green-400 border-2 px-4 py-2 rounded-md flex gap-2 shadow items-center justify-center",
+                                      });
                           }}>Continue</AlertDialogAction>
                         </AlertDialogFooter>
                       </AlertDialogContent>
@@ -123,7 +132,7 @@ const Page = ({params}) => {
                     <p className='w-fit text-green-900 rounded-full text-2xl'>{index+1}</p>
                   </div>
                   <div className="text-gray-700 mt-2 text-lg">
-                    {(urdu === false)?<p>{verse.verse}</p>:<p className='text-right'>{verse.verseUrdu}</p>}
+                    {(urdu === false)?<p className=''>{verse.verse}</p>:<p className='text-right font-bold'>{verse.verseUrdu}</p>}
                   </div>
                 </div>
               </div>

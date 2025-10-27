@@ -36,6 +36,3 @@ export async function getUserLiked(clerkUserId){
   return likedArr
 }
 
-// export async function deletedLike(clerkUserId){
-//   await db.delete(user).where()
-// }
