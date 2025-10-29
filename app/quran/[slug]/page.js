@@ -31,12 +31,6 @@ const Page = ({ params }) => {
   const [surahData, setSurahData] = useState(null)
   const [loading, setLoading] = useState(false)
 
-  // Function to handle play recitation
-  const handlePlayRecitation = () => {
-    if (audioPlayerRef.current) {
-      audioPlayerRef.current.play();
-    }
-  };
 
   async function fetchSurah(surahNumber) {
     try {
@@ -65,26 +59,19 @@ const Page = ({ params }) => {
 
   return (
     <>
-      {/* Navigation */}
       <div className='md:hidden'><ReadNavMobile /></div>
       <ReadNav />
-
-      {/* Main Content */}
       <div data-aos="fade-in">
         <div className='bigboy shadow-sm rounded-xl w-fit h-fit mx-auto border-gray-100 border-solid '>
           <div className="surah w-full mx-auto bg-green-100 pt-5 p-10 max-md:w-full">
             <div className="title">
               <div className="arabic flex justify-between items-center max-md:mb-3">
-                {/* Language Switcher */}
                 <div
                   className="text-white text-sm bg-green-700 rounded-sm p-2 transition-all duration-300 hover:font-bold cursor-pointer text-center"
                   onClick={() => setUrdu((prev) => !prev)}
                 >
                   {urdu ? "English" : "Urdu"}
                 </div>
-
-
-                {/* Surah Arabic Name */}
                 <p className="w-fit text-3xl font-bold text-green-800">{surahData.surahNameArabic}</p>
               </div>
 
