@@ -5,6 +5,7 @@ import { Search } from '@mui/icons-material'
 import { useRouter } from 'next/navigation'
 import SearchNav from '../components/searchNav'
 import SearchNavMobile from '../components/searchNavMobile'
+import SimpleFooter from '../components/footer'
 
 export default function Page(){
   let hRef = useRef()
@@ -212,6 +213,7 @@ export default function Page(){
           )}
         </div>
       </div>
+      <SimpleFooter/>
     </>
   )
   }

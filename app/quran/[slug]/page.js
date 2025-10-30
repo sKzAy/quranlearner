@@ -6,6 +6,7 @@ import 'ldrs/react/Trio.css'
 import { onLikeClick } from '@/app/lib/api'
 import { toast } from 'sonner'
 import { Trio } from 'ldrs/react'
+import SimpleFooter2 from '@/app/components/footer2'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -72,13 +73,13 @@ const Page = ({ params }) => {
                 >
                   {urdu ? "English" : "Urdu"}
                 </div>
-                <p className="w-fit text-3xl font-bold text-green-800">{surahData.surahNameArabic}</p>
+                <p className="w-fit text-3xl font-bold text-green-800 text-right">{surahData.surahNameArabic}</p>
               </div>
 
               <div className='english w-fit mx-auto text-green-800 font-bold text-2xl'>
                 {Number(slug)} - {surahData.surahName} - {surahData?.surahNameTranslation}
               </div>
-              <div className='type w-fit mx-auto text-green-600 text-sm mt-2'>
+              <div className='type w-fit mx-auto text-green-600 text-sm mt-2 font-bold'>
                 {surahData.numOfAyahs} verses
               </div>
             </div>
@@ -130,10 +131,10 @@ const Page = ({ params }) => {
                   </div>
 
                   <div className="arabic flex text-green-800 font-bold justify-end p-3 gap-3">
-                    <p className='w-fit text-2xl'>{verse.verseArabic}</p>
+                    <p className='w-fit text-2xl text-right'>{verse.verseArabic}</p>
                   </div>
                   <div className="text-gray-700 mt-2 text-lg">
-                    {(urdu === false) ? <p className=''>{verse.verse}</p> : <p className='text-right font-bold'>{verse.verseUrdu}</p>}
+                    {(urdu === false) ? <p className='text-left'>{verse.verse}</p> : <p className='text-right font-bold'>{verse.verseUrdu}</p>}
                   </div>
                 </div>
               </div>
@@ -143,12 +144,12 @@ const Page = ({ params }) => {
           </div>
         </div>
       </div>
-
       {/* Audio Player - Rendered at root level, outside main content */}
       <AudioPlayer
         ref={audioPlayerRef}
         src={`https://server8.mp3quran.net/afs/${String(slug).padStart(3, '0')}.mp3`}
       />
+      <SimpleFooter2/>
     </>
   )
 }

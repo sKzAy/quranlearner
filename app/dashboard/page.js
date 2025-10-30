@@ -10,6 +10,7 @@ import { ArrowDropDownCircleRounded } from '@mui/icons-material'
 import DashNavMobile from '../components/dashNavMobile'
 import DashNav from '../components/dashNav'
 import FetchSurahObject from '../lib/quranFunctions'
+import SimpleFooter from '../components/footer'
 
 
 
@@ -84,6 +85,7 @@ const Page = async () => {
             </div>
           </div>
         </div>
+        <SimpleFooter/>
       </>
     )
   }
@@ -146,6 +148,7 @@ const Page = async () => {
           </div>
         </div>
       </div>
+      <SimpleFooter/>
     </>
   )
 }

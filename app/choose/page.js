@@ -8,6 +8,7 @@ import MobileNav from '../components/mobileNav'
 import Navbar from '../components/nav.js'
 import { FetchSurahInfo } from '../lib/quranFunctions'
 import ChooseObject from '../components/chooseObject'
+import SimpleFooter from '../components/footer'
 
 
 export default function Page() {
@@ -51,8 +52,9 @@ export default function Page() {
     <Navbar/>
     </div>
     <ChooseObject props = {surahInfos}/>
-      {/* <Footer/> */}
+    <SimpleFooter/>
     </div>
+    
   )
 
 }

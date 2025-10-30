@@ -1,4 +1,5 @@
 import React from 'react'
+import SimpleFooter from './footer';
 import Box from './box';
 const Landing = () => {
   return (
@@ -26,7 +27,7 @@ const Landing = () => {
         </div>
       </div>
       </div>
-      {/* <Footer/> */}
+      <SimpleFooter/>
     </>
   )
 }
