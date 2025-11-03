@@ -16,7 +16,7 @@ const SimpleFooter = () => {
             <a href="https://ko-fi.com/kazimali"><img width={"200px"} src="/support_me_on_kofi_dark.png" alt="Donate" /></a>
           </div>
           <div>
-            <p className='text-center'>Navigate:</p>
+            <p className='text-center '>Navigate:</p>
             <div className="nav flex gap-3">
               <Link className='underline hover:font-bold transition-all duration-300 hover:transition-all hover:duration-300' href={"/choose"}>Select Surah</Link>
               <Link className='underline hover:font-bold transition-all duration-300 hover:transition-all hover:duration-300' href={"/search"}>Search Surah</Link>

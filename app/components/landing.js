@@ -18,7 +18,7 @@ const Landing = () => {
         </div>
       </div>
       <div className='bg-gray-100'>
-        <p className='text-4xl w-fit mx-auto max-md:text-3xl pt-3'>Begin Your Journey</p>
+        <p className='text-4xl w-fit mx-auto max-md:text-3xl pt-3'>Begin Your Journey:</p>
         <p className='text-center mx-auto max-md:w-[80vw] w-[40vw] text-xl max-md:text-sm text-gray-400 mt-5 max-md:mt-3'>Choose your path to explore and understand the Quran with our comprehensive tools and resources</p>
         <div className="boxes p-7 flex gap-3 w-fit mx-auto max-md:flex-col">
             <Box number={1}/>
