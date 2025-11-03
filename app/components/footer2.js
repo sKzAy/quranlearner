@@ -13,7 +13,7 @@ const SimpleFooter2 = () => {
           <div className="text-sm text-gray-400 mb-4 md:mb-0">
             <p>&copy; {currentYear} YourQuran. All rights reserved.</p>
             <p className='text-lg text-white'>To Keep this site running: </p>
-            <a href="https://kofi.com/kazimali"><img width={"200px"} src="/support_me_on_kofi_dark.png" alt="Donate" /></a>
+            <a href="https://ko-fi.com/kazimali"><img width={"200px"} src="/support_me_on_kofi_dark.png" alt="Donate" /></a>
           </div>
           <div>
             <p className='text-center'>Navigate:</p>
