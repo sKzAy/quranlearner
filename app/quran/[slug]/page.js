@@ -23,7 +23,7 @@ import ReadNavMobile from '@/app/components/readNavMobile'
 import ReadNav from '@/app/components/readNav'
 import FetchSurahObject from '@/app/lib/quranFunctions.js'
 import AudioPlayer from '@/app/components/audioPlayer'
-
+import { useRouter } from 'next/navigation'
 const Page = ({ params }) => {
   const inputRef = useRef()
   const audioPlayerRef = useRef() // Add this ref for the audio player
@@ -31,7 +31,7 @@ const Page = ({ params }) => {
   const [urdu, setUrdu] = useState(false)
   const [surahData, setSurahData] = useState(null)
   const [loading, setLoading] = useState(false)
-
+  const router = useRouter()
 
   async function fetchSurah(surahNumber) {
     try {
@@ -143,6 +143,28 @@ const Page = ({ params }) => {
             )}
           </div>
         </div>
+      </div>
+      <div className='flex justify-between align-middle px-30 py-5'>
+        <div onClick={()=>{
+          if(Number(slug) === 1){
+            router.push(`/quran/114`);
+          }
+          else{
+          router.push(`/quran/${Number(slug)-1}`)
+          }
+        }}
+        className="previous bg-green-500 text-white px-4 py-1 rounded-xl
+        hover:duration-300 hover:text-black duration-300 transition-all hover:transition-all cursor-pointer text-center">Previous</div>
+          <div
+        onClick={()=>{
+          if(Number(slug) === 114){
+            router.push(`/quran/1`)
+          }
+          else{
+          router.push(`/quran/${Number(slug)+1}`)
+          }
+        }} className="next bg-green-500 text-white px-6 py-1 rounded-xl
+        hover:duration-300 hover:text-black duration-300 transition-all hover:transition-all cursor-pointer text-center">Next</div>
       </div>
       {/* Audio Player - Rendered at root level, outside main content */}
       <AudioPlayer
