@@ -14,6 +14,7 @@ export default function Page(){
   const [result, setResult] = useState(null)
   const [suggestions, setSuggestions] = useState([])
 
+
   function normalize(str) {
     return str.toLowerCase().replace(/[^a-z0-9]/g, "")
   }
@@ -148,6 +149,7 @@ export default function Page(){
   }
   
   return (
+  
     
     <>
       <div >
