@@ -18,16 +18,16 @@ const SimpleFooter2 = () => {
           <div>
             <p className='text-center'>Navigate:</p>
             <div className="nav flex gap-3">
-              <Link className='underline hover:font-bold transition-all duration-300 hover:transition-all hover:duration-300' href={"/choose"}>Select Surah</Link>
-              <Link className='underline hover:font-bold transition-all duration-300 hover:transition-all hover:duration-300' href={"/search"}>Search Surah</Link>
-              <Link className='underline hover:font-bold transition-all duration-300 hover:transition-all hover:duration-300' href={"/dashboard"}>Dashboard</Link>
+              <Link className='hover:underline transition-all duration-300 hover:transition-all hover:duration-300' href={"/choose"}>Select Surah</Link>
+              <Link className='hover:underline transition-all duration-300 hover:transition-all hover:duration-300' href={"/search"}>Search Surah</Link>
+              <Link className='hover:underline transition-all duration-300 hover:transition-all hover:duration-300' href={"/dashboard"}>Dashboard</Link>
             </div>
             <div className="links max-md:hidden">
               <p className='text-center'>Popular Links: </p>
               <div className='flex gap-3'>
-              <Link className='underline hover:font-bold transition-all duration-300 hover:transition-all hover:duration-300' href={"/quran/1"}>Al-Fatihah</Link>
-              <Link className='underline hover:font-bold transition-all duration-300 hover:transition-all hover:duration-300' href={"/quran/2"}>Al-Baqarah</Link>
-              <Link className='underline hover:font-bold transition-all duration-300 hover:transition-all hover:duration-300' href={"/quran/55"}>Ar-Rahman</Link>
+              <Link className='hover:underline transition-all duration-300 hover:transition-all hover:duration-300' href={"/quran/1"}>Al-Fatihah</Link>
+              <Link className='hover:underline transition-all duration-300 hover:transition-all hover:duration-300' href={"/quran/2"}>Al-Baqarah</Link>
+              <Link className='hover:underline transition-all duration-300 hover:transition-all hover:duration-300' href={"/quran/55"}>Ar-Rahman</Link>
               </div>
             </div>
           </div>
