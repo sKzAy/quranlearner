@@ -19,8 +19,6 @@ const Page = async () => {
   const user = await currentUser()
   addClerkUserToDb(user.id, user.firstName) //adding the user to db
   let liked = await getUserLiked(user.id) 
-  console.log(liked)
-  console.log("liked ^")
   let favVerses = liked[0].liked //getting all the liked verses
   let fetchedVerse = []
 

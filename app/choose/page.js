@@ -24,7 +24,7 @@ export default function Page() {
     getSurahInfos()
     setLoading(false)
   }, [])
-  console.log(surahInfos)
+
 
   if (loading) return <>
     <div>
